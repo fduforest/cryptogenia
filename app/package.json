@@ -1,0 +1,13 @@
+{
+  "name": "cryptogenia",
+  "version": "1.0.0",
+  "description": "A cryptocurrency arbitrage system",
+  "main": "src/main.js",
+  "author": "Jamal",
+  "license": "CC0-1.0",
+  "dependencies": {
+    "ccxt": "^1.11.137",
+    "datatables.net": "^1.10.19",
+    "jquery": "^3.3.1"
+  }
+}

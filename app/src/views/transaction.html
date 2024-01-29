@@ -1,0 +1,135 @@
+<template>  
+    <div class="col-4">
+
+        <div class=panel>
+            <div class="panel-header bg-lightgrey"><h3>Where to buy</h3></div>
+            <div class="panel-body">
+                <h3 class="mt-0 mb-15"><label class="buyFromExchange"></label></h3>
+                <div class="readonly-line">
+                    <label class="small-label">Balance</label>
+                </div>
+                <div class="readonly-line">
+                    <strong><label class="green small-label" id="buyFromBalanceQuote"></label></strong>
+                    <span id="buyFromBalanceQuoteAUD"></span>
+                </div>
+                <div class="readonly-line">
+                    <strong><label class="green small-label" id="buyFromBalanceBase"></label></strong>
+                    <span id="buyFromBalanceBaseAUD"></span>
+                </div>
+            </div>
+        </div>
+        <div class=panel>
+            <div class="panel-header bg-lightgrey"><h3>Selling <span name="base"></span></h3></div>
+            <div class="panel-body no-padding order-book">
+                <table class="panel-table" id="buyFromOrderBookTable">
+                    <thead>
+                        <tr>
+                            <th>Price</th>
+                            <th>Amount</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-4">
+            <div class=panel>
+                <div class="panel-header bg-lightgrey"><h3>Where to sell</h3></div>
+                <div class="panel-body">
+                    <h3 class="mt-0 mb-15"><label class="sellToExchange"></label></h3>
+                    <div class="readonly-line">
+                        <label class="small-label">Balance</label>
+                    </div>
+                    <div class="readonly-line">
+                        <strong><label class="green small-label" id="sellToBalanceQuote"></label></strong>
+                        <span class="" id="sellToBalanceQuoteAUD"></span>
+                    </div>
+                    <div class="readonly-line">
+                        <strong><label class="green small-label" id="sellToBalanceBase"></label></strong>
+                        <span class="" id="sellToBalancBaseAUD"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-header bg-lightgrey"><h3>Buying <span name="base"></span></h3></div>
+                <div class="panel-body no-padding order-book">
+                    <table class="panel-table" id="sellToOrderBookTable">
+                        <thead>
+                            <tr>
+                                <th>Price</th>
+                                <th>Amount</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+    </div>
+
+    <div class="col-4">
+        <div class="panel box-transaction">
+            <div class="panel-header bg-lightgrey"><h3>Transaction</h3></div>
+            <div class="panel-body">
+                <h3 class="mt-0 mb-15">
+                    <label class="buyFromExchange">Binance</label>
+                    <i class="fa fa-exchange"></i>
+                    <label class="sellToExchange">Poloniex</label>
+                </h3>
+                <div class="mb-15">
+                    <label class="small-label">Pair</label>
+                    <h3 class="mt-0">
+                        <label id="pair"></label>
+                    </h3>
+                </div>
+
+                <div class="mb-15">
+                    <label class="small-label">Price Spread</label>
+                    <h3 class="mt-0">
+                        <label id="price-spread">-</label>
+                    </h3>
+                </div>
+
+                <div class="mb-15">
+                    <label class="small-label">Optimum Amount</label>
+                    <h3 class="mt-0">
+                        <label id="optimum-amount">-</label>
+                    </h3>
+                </div>
+
+                <div class="mb-15">
+                    <label class="small-label">Transaction Fees</label>
+                    <h3 class="mt-0">
+                        <label class="red" id="transaction-fees"></label>
+                    </h3>
+                </div>
+
+                <div class="mb-15">
+                        <label class="small-label">Withdraw Fees</label>
+                        <h3 class="mt-0">
+                            <label class="red" id="withdraw-fees"></label>
+                        </h3>
+                    </div>
+               
+                <div class="mb-15">
+                    <label class="small-label">Profit</label>
+                    <h3 class="mt-0">
+                        <label id="profit"></label>
+                    </h3>
+                    <label id="profitAud"></label>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+</template>
+    

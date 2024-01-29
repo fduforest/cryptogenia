@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="assets/css/jquery.dataTables.css">
+  <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+  <link rel="stylesheet" href="assets/css/main.css" >
+
+  <link rel="import" href="views/dashboard.html" data-import="dashboard">
+  <link rel="import" href="views/exchange.html" data-import="exchange">
+  <link rel="import" href="views/exchangeTable.html" data-import="exchangeTable">
+  <link rel="import" href="views/transaction.html" data-import="transaction">
+  <link rel="import" href="views/markets.html" data-import="markets">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+
+            <!-- Toolbar -->
+            <div class="toolbar">
+                <label class="cog-button float-right" id="bt-settings">
+                    <i class="fa fa-cog"></i>
+                </label>
+            </div>
+
+            <!-- Settings panel -->
+            <div id="settings">
+                <div>
+                    <div>
+                        <div class="close">
+                            <i class="fas fa-times"></i>
+                        </div>
+                    </div>
+                    <div class="form-div">
+                        <div class="form-field">
+                            <label>Minimum Spread %</label>
+                            <input type="text" id="minimumSpread">
+                        </div>
+                        <div class="form-field">
+                            <label>Minimum Profit</label>
+                            <input type="text" id="minimumProfit">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="main">
+            <div id="sidebar">
+                <div class="sidebar-header">
+                    <h3><label>Dashboard</label></h3>
+                </div>
+                <div class="sidebar-content">
+                    <ul>
+                        <li class="sidebar-section" id="sidebar-exchanges-section">
+                            <input id="tg-exchanges" type="checkbox" checked>
+                            <div class="sidebar-section-header">
+                                <label for="tg-exchanges"><i class="arrow" aria-hidden="true"></i>Current Exchanges</label>
+                                <label id="bt-exchange-table" class="sidebar-section-button float-right">
+                                    <i class="fa fa-plus-circle"></i>
+                                </label>
+                            </div>
+                            <div class="sidebar-section-content">
+                                <ul>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-section" id="sidebar-markets-section">
+                            <input id="tg-markets" type="checkbox" checked>
+                            <div class="sidebar-section-header">
+                                <label for="tg-markets"><i class="arrow" aria-hidden="true"></i>Current Markets</label>
+                                <label id="bt-markets" class="sidebar-section-button float-right">
+                                    <i class="fa fa-plus-circle"></i>
+                                </label>
+                                <label id="bt-delete-markets" class="sidebar-section-button float-right">
+                                        <i class="fa fa-trash-alt"></i>
+                                    </label>
+                            </div>
+                            <div class="sidebar-section-content">
+                                <ul>
+
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div id="content">
+                
+            </div>
+            <div id="logging-panel">
+        
+            </div>
+
+            <!-- Spinner -->
+            <div class="spinner hidden">
+                <div>
+                    <span><i class="fa fa-spinner fa-spin"></i></span>
+                </div>
+            </div>
+            
+            <!-- Progress bar -->
+            <div class="progress-bar hidden">
+                <div>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>window.$ = window.jQuery = require('jquery');</script>
+    <script>
+        require('./renderer')
+        require('./scripts/pageLoader')
+        require('./scripts/dashboard')
+        require('./scripts/exchange')
+        require('./scripts/exchangeTable')
+        require('./scripts/markets')
+        require('./scripts/transaction')
+    </script>
+    
+</body>
+</html>
